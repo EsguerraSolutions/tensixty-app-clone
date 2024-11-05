@@ -3,6 +3,8 @@ import Button from "@mui/material/Button";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import VisuallyHiddenInput from "./VisuallyHiddenInput";
 
+import bedroomPhoto from "../assets/images/sample-bedroom-photo.jpg";
+
 const PhotoDisplayAndUploadContainer = ({ photoSize, photoOpacity }) => {
   const [file, setFile] = useState();
   const [initialFileChanged, setInitialFileChanged] = useState(false);
@@ -17,7 +19,7 @@ const PhotoDisplayAndUploadContainer = ({ photoSize, photoOpacity }) => {
       <div className="displayed-image-container">
         <img
           id="fetched-image-preview"
-          src={initialFileChanged ? file : "images/sample-bedroom-photo.jpg"}
+          src={initialFileChanged ? file : bedroomPhoto}
           alt="sample picture of a bedroom"
           style={{
             transform: `scale(${photoSize / 100})`,
